@@ -1,0 +1,28 @@
+ <div class="row bg-warning fixed-top bt-5">
+ <div class="container">
+   <div class="col-sm-12 offset-lg-9">
+ 	<a  class="btn btn-info" routerLink="/instructor">Back to Instructors</a>
+ 	 </div><!-- column -->
+ 	</div><!-- container -->
+ </div><!-- row button instruct rout -->
+<div class="container">
+ <div class="row mt-5" >
+  <div class="col-lg-4 col-sm-12 mb-5" *ngFor="let courses of datajson">
+  	<div class="card card-height" style="width: 18rem;">
+     <img class="card-img-top" src="{{courses.img}}" alt="Card image cap">
+     <div class="card-body">
+		<h5 class="card-title">Category:{{courses.category}}</h5>
+		<p class="card-text">Description:{{courses.Description}}</p>
+		<p class="card-text">Start Date:{{courses.StartDate}}</p>
+		<p class="card-text">End Date:{{courses.EndDate}}</p>
+		<p class="card-text">Start Date:{{courses.StartDate}}</p>
+		<p class="card-text">reserve:{{courses.reserved}}</p>
+	    <p class="card-text">Cost:{{courses.Cost}}</p>
+				<!-- <a [routerLink]="['/WrkspcCrs', courses.id]" class="btn btn-primary">
+					</a> -->
+					<button  class="btn buttonColor mt-4" (click)="addCart(courses.id)">request to course</button>
+      </div>
+    </div>
+  </div><!-- column -->
+ </div><!-- row -->
+</div><!-- container -->

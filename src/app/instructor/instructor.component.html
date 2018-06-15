@@ -1,0 +1,19 @@
+<div class="container">
+	<div class="row mt-5 m-0" >
+		<div class="col-lg-4 mb-5" *ngFor="let instruct of instjson">
+			  <div class="card" style="width: 18rem;">
+			  <img class="card-img-top" src="{{instruct.img}}" alt="Card image cap">
+			   <div class="card-body">
+				<h5 class="card-title ">Name:{{instruct.Name}}</h5>
+				<ngb-rating [(rate)]="currentRate">
+				  <ng-template let-fill="fill" let-index="index">
+					<span class="star" [class.filled]="fill === 100" [class.bad]="index < 3">&#9733;</span>
+				  </ng-template>
+				</ngb-rating>
+				<pre>Rate: <b>{{instruct.currentRate}}</b></pre>
+				<a class="card-text btn btn-primary" routerLink="/courses">See Courses</a>
+			  </div><!-- card-body -->
+			</div><!-- card -->
+		</div><!-- column -->
+	</div><!-- row -->
+</div><!-- container -->

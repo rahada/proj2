@@ -1,0 +1,20 @@
+<section class="mx-auto">
+    <div class="container">
+    <h1 class="">SignIn as workspace </h1>
+		<form name="signInForm" #signInForm="ngForm" (ngSubmit)="getworkspace(signInForm)" novalidate>
+			<div class="form-group" ngModelGroup="name" #name="ngModelGroup" >
+			   <label for="exampleInputEmail1">Workspace name</label>
+			   <input class="form-control" type="email" placeholder="Workspace email" name="Workspace name" [(ngModel)]="Name" required/>
+			   <span *ngIf="!email.valid && email.touched">please name is required</span>
+			 </div>
+		 
+			 <div class="form-group" ngModelGroup="password" #password="ngModelGroup">
+				 <label for="exampleInputPassword1">Workspace Password </label>
+				 <input class="form-control" id="exampleInputEmail1" type="password" placeholder="Workspace Password" name="Workspace Password" [(ngModel)]="Password" required/>
+				 <span *ngIf="!password.valid && password.touched">please password is required</span>
+			 </div>
+		</form>
+		<button type="button" class="btn btn-info mb-5">Submit</button>
+		<p>Do not have an account? <a routerLink="/Signup" routerLinkActive="active">SignUp</a></p>
+	 </div><!-- end of container -->
+</section>

@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="row">
+           <div class="navbar-nav">
+             <a class="nav-item nav-link" routerLink="/CourseAdmin">Courses</a>
+             <a class="nav-item nav-link" routerLink="/AdminInstructor">instructor</a>
+             <a class="nav-item nav-link" routerLink="/WrkspaceAdmin">workspace</a>
+           </div>
+     </div><!-- link rows -->
+   <div class="row mb-5 mt-3"  *ngFor="let workspace of wrkspaceAdmin">
+       <div class="col-lg-4 col-sm-12" >
+           <p class="mt-0"><b>userId:</b> {{workspace.workSpaceId}}</p>
+           <p><b>firstName:</b> {{workspace.totalRate}}</p>
+           <img src="{{workspace.imageUrl}}">
+           <p><b>userDob: </b>{{workspace.city}}</p>
+           <p><b>email: </b>{{workspace.address}}</p>
+           <p><b>latitude:</b> {{workspace.latitude}}</p>
+           <p><b>longtitude:</b> {{workspace.longtitude}}</p>
+           <p><b>name:</b> {{workspace.name}}</p>
+           <p><b>startTime:</b> {{workspace.startTime}}</p>
+           <p><b>closingTime:</b> {{workspace.closingTime}}</p>
+           
+           </div>
+           <div class="col-lg-4">
+              <p><b>holiday:</b> {{workspace.holiday}}</p>
+              <p><b>description:</b> {{workspace.description}}</p>
+              <p><b>noOfRooms:</b> {{workspace.noOfRooms}}</p>
+              <p><b>facebookPageUrl:</b> {{workspace.facebookPageUrl}}</p>
+        <div *ngFor="let wrkspacePhone of workspace.workSpacePhonesCollection">
+            <p><b>workSpaceId:</b>{{wrkspacePhone.workSpacePhonesPK.workSpaceId}}</p>
+            <p><b>phone: </b>{{wrkspacePhone.workSpacePhonesPK.phone}}</p>
+          </div>
+          <div *ngFor="let wrkspacePhone of workspace.workSpaceImagesCollection">
+              <p><b>workSpaceId:</b>{{wrkspacePhone.workSpaceImagesPK.workSpaceId}}</p>
+              <img src="{{wrkspacePhone.workSpaceImagesPK.imageUrl}}">
+            </div>
+       </div><!-- column 1 -->
+       <div class="col-lg-4">
+       <button type="button" class="btn btn-info">Accept</button>
+      </div>
+</div><!-- row -->
+</div><!-- container -->

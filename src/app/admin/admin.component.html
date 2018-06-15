@@ -1,0 +1,22 @@
+
+<section class="mx-auto">
+    <div class="container">
+    <h1 class="">Login  as Admin </h1>
+		<form name="AdminForm" #AdminForm="ngForm" (ngSubmit)="getContact(AdminForm)" novalidate>
+		<div >
+			<div class="form-group" ngModelGroup="userData" #userData="ngModelGroup">
+			   <label for="exampleInputEmail1">Admin name</label>
+			   <input class="form-control" type="text" placeholder="Workspace name" name="Workspace name" [(ngModel)]="Workspace_name" required/>
+			   <span *ngIf="!userData.valid && userData.touched">please name is required</span>
+			 </div>
+		 
+			 <div class="form-group" ngModelGroup="userPassword" #userPassword="ngModelGroup">
+				 <label for="exampleInputPassword1">Admin Password </label>
+				 <input class="form-control" id="exampleInputEmail1" type="password" placeholder="Workspace Password" name="Workspace Password" [(ngModel)]="Workspace_Password" required/>
+				 <span *ngIf="!userPassword.valid && userPassword.touched">please password is required</span>
+			 </div>
+		</div><!-- form group -->
+		</form>
+		<button type="button" routerLink="/AdminInstructor" class="btn btn-info mb-5">Submit</button>
+	 </div><!-- end of container -->
+</section>

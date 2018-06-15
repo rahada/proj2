@@ -1,0 +1,21 @@
+[{
+    "CategoryID": 1,
+    "Name": "Art"
+  }, {
+    "CategoryID": 2,
+    "Name": "Technology"
+  }, {
+    "CategoryID": 3,
+    "Name": "Sport"
+  }, {
+    "CategoryID": 4,
+    "Name": "Crafts & Items"
+  }, {
+    "CategoryID": 5,
+    "Name": "Books & Publishing"
+  },
+  {
+    "CategoryID": 6,
+    "Name": "Others"
+  }
+]
